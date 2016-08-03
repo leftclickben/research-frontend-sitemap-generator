@@ -38,14 +38,21 @@
                 fs.writeFile(
                     'sitemap.xml',
                     xmlbuilder
-                        .create({
-                            urlset: {
-                                url: _.concat(
-                                    _(fixedUrls).map(entryFor).value(),
-                                    _(data).values().map((object) => entryFor({ path: pathFor(object), priority: 0.5 })).value()
-                                )
+                        .create(
+                            {
+                                urlset: {
+                                    '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+                                    url: _.concat(
+                                        _(fixedUrls).map(entryFor).value(),
+                                        _(data).values().map((object) => entryFor({ path: pathFor(object), priority: 0.5 })).value()
+                                    )
+                                }
+                            },
+                            {
+                                version: '1.0',
+                                encoding: 'UTF-8'
                             }
-                        })
+                        )
                         .end({ pretty: true }),
                     callback
                 );
