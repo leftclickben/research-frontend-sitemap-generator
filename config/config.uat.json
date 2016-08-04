@@ -9,8 +9,10 @@
         "protocol": "https",
         "hostname": "uat-research.histwest.org.au"
     },
-    "deploy": {
-        "profile": "rwahs",
+    "generate": {
+        "path": "/tmp/"
+    },
+    "upload": {
         "bucket": "rwahs.uat.research-frontend"
     }
 }

@@ -9,5 +9,8 @@
         "protocol": "http",
         "hostname": "localhost:8888"
     },
-    "deploy": false
+    "generate": {
+        "path": "./"
+    },
+    "upload": false
 }

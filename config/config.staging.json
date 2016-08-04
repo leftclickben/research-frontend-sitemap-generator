@@ -9,8 +9,10 @@
         "protocol": "https",
         "hostname": "staging-research.histwest.org.au"
     },
-    "deploy": {
-        "profile": "rwahs",
+    "generate": {
+        "path": "/tmp/"
+    },
+    "upload": {
         "bucket": "rwahs.staging.research-frontend"
     }
 }
