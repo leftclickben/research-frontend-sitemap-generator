@@ -79,6 +79,7 @@ lib/upload.js
 Create a function which is executed on a schedule (CloudWatch Events - Schedule):
 
 * Schedule rate should be once per day.
+* The trigger needs to pass the environment to the function, via the event, like `{ "environment": "staging" }`.
 * Function name is `updateResearchFrontendSitemap` (this is required for `bin/deploy.sh` to work).
 * The handler is `index.handler` (this is required for the code to execute correctly).
 * Runtime should be `Node.js 4.3`.
