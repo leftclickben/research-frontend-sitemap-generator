@@ -24,9 +24,5 @@
   "devel": true,
 
   // globals
-  "browser": true,
-  "globals": {
-    "require": true,
-    "define": true
-  }
+  "node": true
 }
