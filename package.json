@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rwahs/research-frontend-sitemap-generator#readme",
   "dependencies": {
+    "aws-sdk": "^2.4.12",
     "lodash": "^4.14.1",
     "request": "^2.74.0",
     "xmlbuilder": "^8.2.2"
