@@ -8,5 +8,11 @@
     "frontend": {
         "protocol": "https",
         "hostname": "staging-research.histwest.org.au"
+    },
+    "generate": {
+        "path": "/tmp/"
+    },
+    "upload": {
+        "bucket": "rwahs.staging.research-frontend"
     }
 }

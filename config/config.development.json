@@ -8,5 +8,9 @@
     "frontend": {
         "protocol": "http",
         "hostname": "localhost:8888"
-    }
+    },
+    "generate": {
+        "path": "./"
+    },
+    "upload": false
 }
