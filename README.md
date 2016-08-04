@@ -14,7 +14,7 @@ npm install
 
 Also your `NODE_ENV` environment variable needs to be configured correctly.  It defaults to `development`, so no
 setting is necessary in development environments.  In deployed environments, it can be added to `/etc/environment`.
-It can also be set when running a command, like `NODE_ENV=staging bin/<command>`.
+It can also be set when running a command, like `NODE_ENV=staging <command>`.
 
 Finally, you will need some AWS credentials stored in your `.aws/config` file in the `rwahs` profile.
 
@@ -59,7 +59,7 @@ This calls the two steps described below in succession.
 To generate a sitemap:
 
 ```
-bin/generate.js
+lib/generate.js
 ```
 
 This calls the web service as defined in `config/config.<NODE_ENV>.json` and saves its output as `sitemap.xml`.
@@ -69,7 +69,7 @@ This calls the web service as defined in `config/config.<NODE_ENV>.json` and sav
 To upload the generated `sitemap.xml` file to the configured location in S3:
 
 ```
-bin/upload.js
+lib/upload.js
 ```
 
 ## Deployment to AWS Lambda
@@ -79,8 +79,8 @@ bin/upload.js
 Create a function which is executed on a schedule (CloudWatch Events - Schedule):
 
 * Schedule rate should be once per day.
-* Suggested name is `updateResearchFrontendSitemap`.
-* The handler is `index.handler`.
+* Function name is `updateResearchFrontendSitemap` (this is required for `bin/deploy.sh` to work).
+* The handler is `index.handler` (this is required for the code to execute correctly).
 * Runtime should be `Node.js 4.3`.
 * Memory should be set to 256MB.
 * Timeout needs to be 1 minute or greater.
@@ -88,7 +88,12 @@ Create a function which is executed on a schedule (CloudWatch Events - Schedule)
 
 ### Deploy the function
 
-The function can be deployed according to the methods described by the AWS documentation, i.e. through the Lambda web
-console, or via the AWS SDK:
+To build the package, upload it to S3 and then deploy it to Lambda:
 
-* http://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html
+```
+bin/deploy.sh
+```
+
+This creates a zip file in the parent directory, which will remain on the local disk after the command finishes.
+
+The code could also be deployed manually through the Lambda web console, or using the SDK.
