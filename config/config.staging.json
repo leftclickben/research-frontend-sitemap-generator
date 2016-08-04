@@ -8,5 +8,9 @@
     "frontend": {
         "protocol": "https",
         "hostname": "staging-research.histwest.org.au"
+    },
+    "deploy": {
+        "profile": "rwahs",
+        "bucket": "rwahs.staging.research-frontend"
     }
 }

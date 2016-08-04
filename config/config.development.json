@@ -8,5 +8,6 @@
     "frontend": {
         "protocol": "http",
         "hostname": "localhost:8888"
-    }
+    },
+    "deploy": false
 }

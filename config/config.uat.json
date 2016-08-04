@@ -8,5 +8,9 @@
     "frontend": {
         "protocol": "https",
         "hostname": "uat-research.histwest.org.au"
+    },
+    "deploy": {
+        "profile": "rwahs",
+        "bucket": "rwahs.uat.research-frontend"
     }
 }
