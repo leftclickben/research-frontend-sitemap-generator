@@ -1,0 +1,24 @@
+{
+  "name": "research-frontend-sitemap-generator",
+  "version": "1.0.0",
+  "description": "Generates sitemap.xml for the research frontend based on a search service call.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwahs/research-frontend-sitemap-generator.git"
+  },
+  "author": "Gaia Resources",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rwahs/research-frontend-sitemap-generator/issues"
+  },
+  "homepage": "https://github.com/rwahs/research-frontend-sitemap-generator#readme",
+  "dependencies": {
+    "lodash": "^4.14.1",
+    "request": "^2.74.0",
+    "xmlbuilder": "^8.2.2"
+  }
+}

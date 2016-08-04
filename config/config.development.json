@@ -1,0 +1,12 @@
+{
+    "service": {
+        "protocol": "https",
+        "hostname": "staging-collections-api.histwest.org.au",
+        "username": "research-frontend",
+        "password": "NotReallySecret"
+    },
+    "frontend": {
+        "protocol": "http",
+        "hostname": "localhost:8888"
+    }
+}

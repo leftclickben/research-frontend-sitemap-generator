@@ -1,0 +1,30 @@
+[
+    {
+        "path": "/",
+        "priority": 1.0
+    },
+    {
+        "path": "/all/search",
+        "priority": 0.8
+    },
+    {
+        "path": "/library/search",
+        "priority": 0.7
+    },
+    {
+        "path": "/photographs/search",
+        "priority": 0.7
+    },
+    {
+        "path": "/museum/search",
+        "priority": 0.7
+    },
+    {
+        "path": "/memorials/search",
+        "priority": 0.7
+    },
+    {
+        "path": "/about",
+        "priority": 0.1
+    }
+]

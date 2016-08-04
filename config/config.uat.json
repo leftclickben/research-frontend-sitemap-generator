@@ -1,0 +1,12 @@
+{
+    "service": {
+        "protocol": "https",
+        "hostname": "uat-collections-api.histwest.org.au",
+        "username": "research-frontend",
+        "password": "NotReallySecret"
+    },
+    "frontend": {
+        "protocol": "https",
+        "hostname": "uat-research.histwest.org.au"
+    }
+}
