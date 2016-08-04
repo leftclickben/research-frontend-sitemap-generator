@@ -26,4 +26,4 @@
         let environment = process.env.NODE_ENV || 'development';
         exports.handler({ environment: environment }, {}, () => {});
     }
-}(require('./bin/generate'), require('./bin/upload')));
+}(require('./lib/generate'), require('./lib/upload')));
