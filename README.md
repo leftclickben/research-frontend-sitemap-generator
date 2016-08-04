@@ -46,6 +46,16 @@ Additional fields are allowed, but unused.
 
 ## Execution
 
+To execute the complete cycle, simply do:
+
+```
+./index.js
+```
+
+This calls the two steps described below in succession.
+
+### Generation
+
 To generate a sitemap:
 
 ```
@@ -53,3 +63,32 @@ bin/generate.js
 ```
 
 This calls the web service as defined in `config/config.<NODE_ENV>.json` and saves its output as `sitemap.xml`.
+
+### Upload to S3
+
+To upload the generated `sitemap.xml` file to the configured location in S3:
+
+```
+bin/upload.js
+```
+
+## Deployment to AWS Lambda
+
+### Create the function
+
+Create a function which is executed on a schedule (CloudWatch Events - Schedule):
+
+* Schedule rate should be once per day.
+* Suggested name is `updateResearchFrontendSitemap`.
+* The handler is `index.handler`.
+* Runtime should be `Node.js 4.3`.
+* Memory should be set to 256MB.
+* Timeout needs to be 1 minute or greater.
+* The Role used by the Lambda function needs to have Lambda basic execution permission, and S3 write permission.
+
+### Deploy the function
+
+The function can be deployed according to the methods described by the AWS documentation, i.e. through the Lambda web
+console, or via the AWS SDK:
+
+* http://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html
