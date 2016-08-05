@@ -1,0 +1,18 @@
+{
+    "service": {
+        "protocol": "https",
+        "hostname": "collections-api.histwest.org.au",
+        "username": "research-frontend",
+        "password": "NotReallySecret"
+    },
+    "frontend": {
+        "protocol": "https",
+        "hostname": "research.histwest.org.au"
+    },
+    "generate": {
+        "path": "/tmp/"
+    },
+    "upload": {
+        "bucket": "rwahs.production.research-frontend"
+    }
+}
